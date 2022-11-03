@@ -1,6 +1,7 @@
 import React from 'react'
 import {useParams, useHistory} from 'react-router-dom';
 import useFetch from './UseFetch';
+import { Button } from 'react-bootstrap';
 
 
 export default function BlogDetails() {
@@ -26,7 +27,9 @@ history.push('/')
                 <h2>{blog.title}</h2>
                 <p>Written by {blog.author}</p>
                 <div>{blog.description}</div>
-                <button onClick={handleClick}>delete</button>
+                <Button 
+                variant='outline-danger'
+                onClick={handleClick}>delete</Button>
             </article>    
         )}
 

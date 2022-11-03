@@ -8,7 +8,7 @@ const[error, setError]= useState(null)
     useEffect(()=>{
         fetch(url)
         .then(response => {
-            // console.log(response)
+            console.log(response)
             if(!response.ok){
                 throw Error('Could not fetch the data');
             }

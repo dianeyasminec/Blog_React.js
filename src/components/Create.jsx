@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import {useHistory} from 'react-router-dom'
+import { Button } from 'react-bootstrap';
 
 export default function Create() {
 
@@ -45,10 +46,14 @@ function handleSubmit(e){
           <select
           value={author}
           onChange={(e)=> setAuthor(e.target.value)}>
-            <option value="Diane"></option>
-            <option value="yasmine"></option>
+            <option value="Junot Diaz">Junot Diaz</option>
+            <option value="Diane">Diane</option>
+            
           </select>
-          <button>Add Blog</button>
+          <Button 
+          variant="outline-dark">
+            Add Blog
+          </Button>
           
         </form>
     </div>
