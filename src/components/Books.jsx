@@ -7,7 +7,7 @@ import UseFetch from './UseFetch'
 
 export default function Books() {
 
-    const{data:blogs, error} = UseFetch(' http://localhost:8000/blogs')
+    const{data:blogs, error} = UseFetch('http://localhost:8000/blogs')
 
   return (
    

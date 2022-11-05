@@ -6,17 +6,19 @@ export default function Create() {
 
 const[title, setTitle] = useState('');
 const[body, setBody] = useState('');
-const[author, setAuthor] = useState('diane');
+const[author, setAuthor] = useState('');
 const history = useHistory()
 
 
 function handleSubmit(e){
   e.preventDefault();
-  const blog = {title, body, author}
-  // console.log(blog)
-  fetch(' http://localhost:8000/blogs', {
+  const blog = {title, body, author};
+
+  console.log(blog)
+ 
+  fetch('http://localhost:8000/blogs', {
     method: 'POST',
-    headers: {'Content-Type' : 'application/json'},
+    headers: {"Content-Type" : "application/json"},
     body: JSON.stringify(blog)
   })
   .then(()=>{
@@ -36,6 +38,7 @@ function handleSubmit(e){
           onChange={(e)=> setTitle(e.target.value)}
           type="text"
           required/>
+          
           <label>Blog body: </label>
           <textarea
           value={body}
