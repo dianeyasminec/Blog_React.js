@@ -54,7 +54,7 @@ function handleSubmit(e){
             
           </select>
           <Button 
-          variant="outline-dark">
+          variant="outline-primary">
             Add Blog
           </Button>
           
